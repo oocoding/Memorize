@@ -12,6 +12,7 @@
 		DD2E987C261371380026A5FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2E987B261371380026A5FB /* Assets.xcassets */; };
 		DD2E987F261371380026A5FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2E987E261371380026A5FB /* Preview Assets.xcassets */; };
 		DD4C47B12614DB93003CAC4B /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C47B02614DB93003CAC4B /* MemoryGame.swift */; };
+		DD4C47B42614DDC7003CAC4B /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C47B32614DDC7003CAC4B /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DD2E987E261371380026A5FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD2E9880261371380026A5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD4C47B02614DB93003CAC4B /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		DD4C47B32614DDC7003CAC4B /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				DD2E9877261371370026A5FB /* MemorizeApp.swift */,
 				DD4C47B02614DB93003CAC4B /* MemoryGame.swift */,
+				DD4C47B32614DDC7003CAC4B /* EmojiMemoryGame.swift */,
 				DD2E9879261371370026A5FB /* ContentView.swift */,
 				DD2E987B261371380026A5FB /* Assets.xcassets */,
 				DD2E9880261371380026A5FB /* Info.plist */,
@@ -144,6 +147,7 @@
 				DD4C47B12614DB93003CAC4B /* MemoryGame.swift in Sources */,
 				DD2E987A261371370026A5FB /* ContentView.swift in Sources */,
 				DD2E9878261371370026A5FB /* MemorizeApp.swift in Sources */,
+				DD4C47B42614DDC7003CAC4B /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
