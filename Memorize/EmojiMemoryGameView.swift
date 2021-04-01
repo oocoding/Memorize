@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameView.swift
 //  Memorize
 //
 //  Created by Zhang Xiangxiong on 2021/3/30.
@@ -9,12 +9,11 @@ import SwiftUI
 
 struct EmojiMemoryGameView: View {
     
-    var viewModel: EmojiMemoryGame
-    
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         HStack {
-            ForEach(viewModel.cards.shuffled()) { card in
+            ForEach(viewModel.cards) { card in
                 CardView(card: card)
                     .onTapGesture {
                         self.viewModel.choose(card: card)
@@ -37,7 +36,8 @@ struct CardView: View {
     var card: MemoryGame<String>.Card
     
     var body: some View {
-        ZStack {
+        print("draw cardView:\(card)")
+        return ZStack {
             RoundedRectangle(cornerRadius: 10).fill(Color.white)
             RoundedRectangle(cornerRadius: 10)
                 .stroke(lineWidth: 2)
