@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct EmojiMemoryGameView: View {
     
     var viewModel: EmojiMemoryGame
     
@@ -28,7 +28,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(viewModel: EmojiMemoryGame())
+            EmojiMemoryGameView(viewModel: EmojiMemoryGame())
         }
     }
 }
