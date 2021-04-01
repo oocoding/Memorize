@@ -29,8 +29,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView(viewModel: EmojiMemoryGame())
-            //            CardView(isFaceUp: true)
-            //            CardView(isFaceUp: false)
         }
     }
 }
