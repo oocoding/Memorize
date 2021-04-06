@@ -36,20 +36,35 @@ struct ContentView_Previews: PreviewProvider {
 struct CardView: View {
     var card: MemoryGame<String>.Card
     
+    
     var body: some View {
-        print("draw cardView:\(card)")
-        return ZStack {
-            RoundedRectangle(cornerRadius: 10).fill(Color.white)
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(lineWidth: 2)
+        GeometryReader { geometry in
+            self.body(for: geometry.size)
+        }
+    }
+    
+    
+    func body(for size: CGSize) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
+            RoundedRectangle(cornerRadius: cornerRadius)
+                .stroke(lineWidth: edgeLineWidth)
             
             if card.isFaceUp {
                 Text(card.content)
             } else {
-                RoundedRectangle(cornerRadius: 10).fill(Color.orange)
+                RoundedRectangle(cornerRadius: cornerRadius).fill(Color.orange)
             }
         }
         .foregroundColor(.orange)
-        .padding(.all, 6)
+        .padding(.all, paddingMigrate)
+        .font(Font.system(size: min(size.width, size.height)*fontScaleFactor))
     }
+    
+    // MARK:- Drawing Constants
+    let cornerRadius:CGFloat = 10
+    let edgeLineWidth: CGFloat = 3
+    let paddingMigrate: CGFloat = 6
+    let fontScaleFactor: CGFloat = 0.6
+    
 }
