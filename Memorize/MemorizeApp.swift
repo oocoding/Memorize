@@ -13,8 +13,14 @@ struct MemorizeApp: App {
     let game = EmojiMemoryGame()
     
     var body: some Scene {
-        WindowGroup {
+        return WindowGroup {
             EmojiMemoryGameView(viewModel: game)
         }
+    }
+}
+
+extension Int: Greatness {
+    func isGreaterThan(other: Int) -> Bool {
+        return self - other >= 0
     }
 }
