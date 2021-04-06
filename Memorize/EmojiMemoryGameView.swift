@@ -58,7 +58,7 @@ struct CardView: View {
         }
         .foregroundColor(.orange)
         .padding(.all, paddingMigrate)
-        .font(Font.system(size: min(size.width, size.height)*fontScaleFactor))
+        .font(Font.system(size: fontSize(for: size)))
     }
     
     // MARK:- Drawing Constants
@@ -66,5 +66,9 @@ struct CardView: View {
     let edgeLineWidth: CGFloat = 3
     let paddingMigrate: CGFloat = 6
     let fontScaleFactor: CGFloat = 0.6
+    
+    func fontSize(for size: CGSize) -> CGFloat {
+        min(size.width, size.height)*fontScaleFactor
+    }
     
 }
