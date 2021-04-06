@@ -19,8 +19,3 @@ struct MemorizeApp: App {
     }
 }
 
-extension Int: Greatness {
-    func isGreaterThan(other: Int) -> Bool {
-        return self - other >= 0
-    }
-}
